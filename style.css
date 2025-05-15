@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+.main_Page {
+  width: 100%;
+  background: url("https://www.travellens.co/content/images/2022/10/Restaurants-in-Park-Slope-Brooklyn.jpg")
+    no-repeat;
+  background-size: 100%;
+}
+
+.header_Logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 13%;
+  font-weight: lighter;
+}
+
+.header_Logo img {
+  height: 35px;
+  vertical-align: middle;
+  padding: 0px 10px;
+}
+
+.header_Logo span {
+  font-size: 30px;
+}
+
+.header_NavBar {
+  list-style-type: none;
+  display: flex;
+}
+
+.header_NavBar > li {
+  padding: 0px 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.header_NavBar > li:hover {
+  color: #ff0000;
+}
+
+.main_Content {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  /* color: #fff; */
+}
+
+.main_Content h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+}
+
+.main_Content p {
+  font-size: 13px;
+  width: 50%;
+  margin-bottom: 40px;
+  line-height: 30px;
+}
+
+.view_Button {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: hsl(255deg 50% 40%);
+  border: solid 4px hsl(50deg 100% 50%);
+  font-family: inherit;
+}
+
+.default-btn,
+.hover-btn {
+  background-color: hsl(255deg 50% 40%);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hover-btn {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(255deg 50% 49%);
+  transform: translate(0%, 100%);
+}
+
+.default-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+  color: hsl(50deg 100% 50%);
+}
+
+.view_Button:hover .default-btn {
+  transform: translate(0%, -100%);
+}
+
+.view_Button:hover .hover-btn {
+  transform: translate(0%, 0%);
+}
+
+.food_Content {
+  margin: 40px;
+  background-color: #c2bdbd36;
+  padding: 2%;
+}
+
+.food_Content .content_Left {
+  width: 40%;
+  float: left;
+}
+
+.content_Left p {
+  margin: 20px 0;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.food_Content img {
+  height: 300px;
+  width: 45%;
+  margin-left: 15%;
+}
+
+.feature_Content {
+  text-align: center;
+  padding: 10px;
+}
+
+.feature_Content p {
+  font-size: 14px;
+  padding: 20px 200px 0 200px;
+  line-height: 25px;
+}
+
+.cards {
+  perspective: 500px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  column-gap: 5%;
+  row-gap: 25px;
+  padding-left: 14%;
+  margin-top: 30px;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  background: #16161d;
+  border: 2px solid #555555;
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+}
+
+.card_title {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  transition: transform 0.5s;
+  font: 700 1.5rem monospace;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+}
+
+.card:hover .card_title {
+  transform: translateZ(50px);
+}
+
+.card_title img {
+  height: 40px;
+}
+
+.cards p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 20px;
+  margin: 15px 0px;
+}
+
+.delicious_Food {
+  height: 450px;
+  background: linear-gradient(
+      to left,
+      rgba(255, 0, 0, 0.411),
+      rgba(0, 0, 255, 0.404)
+    ),
+    url("https://c8.alamy.com/comp/2C5F2AJ/fast-food-seamless-pattern-hand-drawn-pizza-burger-and-fries-hot-dog-hamburger-and-cola-for-fast-food-menu-wallpaper-vector-texture-2C5F2AJ.jpg")
+      no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  padding: 7%;
+  text-align: center;
+}
+
+.delicious_Food h1 {
+  font-size: 60px;
+}
+
+.delicious_Food p {
+  font-size: 14px;
+  padding: 20px;
+  line-height: 25px;
+}
+
+.item_Menu {
+  /* background-color: red; */
+  padding: 5%;
+  text-align: center;
+}
+
+.item_Menu > h1 {
+  font-size: 30px;
+}
+
+.item_Menu > p {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.card_Menu_Itmes {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 8%;
+  row-gap: 10%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.menu_Card {
+  position: relative;
+  width: 300px;
+  height: 210px;
+  background: url("https://www.everydayeasyeats.com/wp-content/uploads/2018/01/Pineapple-Coconut-Chicken-Fried-Rice-1.jpg")
+    no-repeat;
+  background-size: cover;
+  border: 1px solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu_Card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu_Card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.menu_Card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+.card_Menu_Itmes > .menu_Card:nth-child(2) {
+  background: url("https://fitmencook.com/wp-content/uploads/2023/02/DSC_0191-111.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.card_Menu_Itmes > .menu_Card:nth-child(3) {
+  background: url("https://www.justbake.in/userfiles/caramel-fiesta.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.card_Menu_Itmes > .menu_Card:nth-child(4) {
+  background: url("https://wholefoodsoulfoodkitchen.com/wp-content/uploads/2022/04/chocolate-milkshake-no-ice-cream-2.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.card_Menu_Itmes > .menu_Card:nth-child(5) {
+  background: url("https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzc2VydHxlbnwwfHwwfHx8MA%3D%3D")
+    no-repeat;
+  background-size: cover;
+}
+
+.card_Menu_Itmes > .menu_Card:nth-child(6) {
+  background: url("https://parade.com/.image/t_share/MTkwNTc2MDAxNjM3Mjk1MjI5/ricotta-kunafa-rolls.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.footer_Part {
+  padding: 5%;
+  background-color: #131212ee;
+  color: #fff;
+  text-align: center;
+}
+
+.footer_Part > h1 {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.footer_Part > h1 img {
+  height: 30px;
+}
+
+.footer_Part p {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 20px;
+}
+
+.footer_Address {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_Address h4 {
+  font-size: 15px;
+  height: 25px;
+}
+
+.footer_Address p {
+  line-height: 18px;
+}
